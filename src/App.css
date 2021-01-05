@@ -1,0 +1,258 @@
+/* univeral css */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Redressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Merriweather&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.strong_text {
+  font-weight: 900;
+  font-family: "Merriweather", serif;
+}
+
+.light_text {
+  font-family: "Darker Grotesque", sans-serif;
+  color: #949494;
+}
+
+.red_text {
+  color: rgb(230, 89, 89);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+a:hover {
+  color: orange;
+  transition: all 0.8s;
+}
+
+/* navbar css */
+
+.logo {
+  height: 30px;
+  margin: 15px;
+  margin-left: 20px;
+  border: 4px solid orange;
+}
+
+.mid_nav {
+  display: flex;
+  align-items: center;
+}
+
+.end_nav {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.end_nav h6 {
+  position: absolute;
+  text-align: center;
+  color: white;
+  background-color: rgb(255, 30, 0);
+  width: 15px;
+  height: 15px;
+  top: 15px;
+  right: 15px;
+  z-index: 101;
+  border-radius: 100px;
+}
+
+/* banner css */
+
+.banner {
+  background-image: linear-gradient(315deg, #ce4e13 50%, #161616);
+  height: 50px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 11px;
+  font-family: "Redressed", cursive;
+}
+
+#banner_btn {
+  margin-left: 10px;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  border-radius: 100px;
+}
+
+#banner_btn:hover {
+  color: orange;
+  background-color: rgb(54, 48, 36);
+  transition: all 0.8s;
+}
+
+/* hero css */
+
+.hero {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+#head_info {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+#filter_text {
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.filter_btn {
+  padding: 15px 25px 15px 25px;
+  border-radius: 100px;
+  margin-left: 20px;
+  color: #6e6e6e;
+  border: 2px solid #c9c9c9;
+}
+
+.selected_btn {
+  color: black;
+  border: 2px solid black;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  border-bottom: 2px solid #949494;
+}
+
+.select_wrap {
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 0 5px;
+  width: 250px;
+  background-color: #fff;
+}
+.select_wrap label {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #777;
+  padding: 0 8px;
+}
+
+.select_wrap select {
+  background-color: #fff;
+  border: 0px;
+  height: 50px;
+  font-size: 16px;
+}
+
+/* card css */
+
+.card_container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+.card {
+  display: none;
+  width: 22vw;
+  margin: 50px 1.2vw 50px 1.2vw;
+  position: relative;
+  --c: none;
+}
+.show_card {
+  display: block;
+}
+
+.card_img {
+  width: 22vw;
+  padding-bottom: 10px;
+}
+
+.price_box {
+  display: flex;
+  margin-top: 5px;
+}
+
+.price_box h3 {
+  margin-right: 5px;
+}
+
+/* hover css */
+/* created a variable in .card, gave it value of 'none', on card hover, value of variable changes to 'block'  */
+
+.size_div {
+  display: var(--c);
+  height: 100px;
+  width: 22vw;
+  background-color: white;
+  position: absolute;
+  z-index: 99;
+  top: 415px;
+}
+
+.size_div h2 {
+  margin: 10px;
+}
+
+.size_btn {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 100px;
+  border: 2px solid #949494;
+}
+
+.size_btn:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+.card:hover {
+  --c: block;
+}
+
+/* add-cart-button css */
+
+.add_to_cart_div {
+  display: none;
+  height: 100px;
+  width: 22vw;
+  background-color: white;
+  position: absolute;
+  z-index: 100;
+  top: 415px;
+}
+
+#add_btn {
+  padding: 10px;
+  margin-top: 30px;
+  width: 22vw;
+  background-color: #fff;
+  border: 3px solid #949494;
+}
+
+#add_btn:hover {
+  background-color: #949494;
+  color: white;
+  transition: all 0.5s;
+}
+
+.show_add_btn {
+  display: block;
+}
